@@ -29,7 +29,11 @@ public class DiscordBot {
         @Override
         public void onMessageReceived(MessageReceivedEvent event){
             if(event.getChannel().getId().equals(channel) && event.getAuthor() != jda.getSelfUser()) {
-                Call.sendMessage("(discord) " + event.getAuthor().getName() + ": " + event.getMessage().getContentRaw().substring(0,150));
+                String message = event.getMessage().getContentRaw();
+                if(message.length() > 150){
+                    message = message.substring(0,149);
+                }
+                Call.sendMessage("(discord) " + event.getAuthor().getName() + ": " + message);
             }
         }
     }
