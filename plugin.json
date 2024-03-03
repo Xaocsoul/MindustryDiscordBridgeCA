@@ -1,5 +1,5 @@
 {
-  "name": "ExamplePlugin",
+  "name": "CaDiscordConnection",
   "author": "Anuke",
   "main": "DiscordBridge.DiscordPlugin",
   "description": "A plugin to demonstrate some basic features.",
